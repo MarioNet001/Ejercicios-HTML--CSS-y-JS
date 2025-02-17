@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #C4B7E6;
+    color: #001F3F;
+    font-family: "Muli", sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+h2,h4 {
+    margin: 10px 0 20px;
+    text-align: center;
+    }
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    text-align: center;
+}
+
+
+
+.container {
+    width: 50vw;
+}
+
+.input-container {
+  position: relative;
+  margin: 50px;
+}
+
+.input-container textarea {
+  border: none;
+  font-size: 20px;
+  display: block;
+  width: 90%;
+  height: 140px;
+  border-bottom: 3px solid #ccc;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+textarea:focus{
+  outline: none;
+}
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #7a7979;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container textarea:focus ~ .label,
+.input-container textarea:valid ~ .label {
+  top: -20px;
+  font-size: 20px;
+  color: #001F3F;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 90%;
+  background-color: #001F3F;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container textarea:focus ~ .underline,
+.input-container textarea:valid ~ .underline {
+  transform: scaleX(1);
+}
+
+
+  .tag {
+    border-radius: 42px;
+  background: linear-gradient(45deg, #b0a5cf, #d2c4f6);
+  box-shadow:  10px -10px 21px #8980a1,
+            -10px 10px 21px #ffeeff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin: 0 5px 10px 0;
+    font-size: 14px;
+    display: inline-block;
+  }
+  
+  .tag.highlight {
+    color: #726e6e;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  }
+
+  button {
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #c5bae2;
+    cursor: pointer;
+    border: 1px solid #C4B7E6;
+    transition: all 0.3s;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  }
+  
+  button:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  }
+
+
+  @media(max-width: 768px) {
+    main {
+      flex-direction: column;
+    }
+    .container{
+      width: 100vw;
+      height: 50vh;
+      margin: 10px;
+    }
+  }
+  

@@ -1,0 +1,66 @@
+body {
+    background-color:#1e4d3d;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  #game-board {
+    display: grid;
+    place-items: center;
+  }
+  .card {
+    border-radius: 10px;
+    background: linear-gradient(45deg, #1b4537, #205241);
+    box-shadow:  12px -12px 17px #122e25,
+                -12px 12px 17px #2a6c55;
+  }
+.score {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    font: normal 20px/normal "Warnes", Helvetica, sans-serif;
+    color: rgba(255,255,255,1);
+    text-decoration: normal;
+    text-align: center;
+    text-overflow: clip;
+    white-space: pre;
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgb(255, 255, 255) , 0 0 40px #00ffb3 , 0 0 70px #00ffdd , 0 0 80px #00ffb3 , 0 0 100px #00ffb3;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.invisible {
+    display: none;
+}
+
+.btn-shine {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  padding: 12px 48px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: linear-gradient(to right, #9f9f9f 0, #fff 10%, #868686 20%);
+  background-position: 0;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s infinite linear;
+  animation-fill-mode: forwards;
+  font-weight: 600;
+  font-size: 28px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+}
+@keyframes shine {
+  0% {
+    background-position: 80;
+  }
+  60% {
+    background-position: 200px;
+  }
+  100% {
+    background-position: 470px;
+  }
+}
